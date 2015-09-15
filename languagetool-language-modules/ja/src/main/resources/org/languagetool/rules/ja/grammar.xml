@@ -2518,7 +2518,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 		<rule id="KOUGI" name="講議">
 			<pattern case_sensitive="no">
 				<token>講</token>
-				<token>議</token>　
+				<token>議</token>
 			</pattern>
 			<message>誤変換です。<suggestion>講義</suggestion>の間違いです。</message>
 			<example correction="講義"><marker>講議</marker>。</example>
@@ -3200,7 +3200,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 			<pattern case_sensitive="no">
 				<token>質</token>
 				<token>議</token>
-				<token>応答</token>　 
+				<token>応答</token>
 			</pattern>
 			<message>誤変換です。<suggestion>質疑応答</suggestion>の間違いです。</message>
 			<example correction="質疑応答"><marker>質議応答</marker>が始まった。</example>
@@ -3831,7 +3831,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 			<pattern case_sensitive="no">
 				<token>高値</token>
 				<token>の</token>
-				<token>花</token>　 
+				<token>花</token>
 			</pattern>
 			<message>誤変換です。<suggestion>高嶺の花</suggestion>の間違いです。</message>
 			<example correction="高嶺の花"><marker>高値の花</marker>。</example>
@@ -3969,7 +3969,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 		</rule>
 		<rule id="TINAMAGUSAI" name="血生臭い">
 			<pattern case_sensitive="no">
-				<token>血</token>　
+				<token>血</token>
 				<token inflected="yes">生臭い</token>
 			</pattern>
 			<message>誤変換です。<suggestion>血腥い</suggestion>の間違いです。</message>
@@ -6038,7 +6038,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 			<example correction="決められる"><marker>決めれる</marker>。</example>
 		</rule>
 		<rule id="TABERERU" name="食べれる">
-			<pattern case_sensitive="no">　
+			<pattern case_sensitive="no">
 				<token regexp="yes">食べ|たべ</token>
 				<token inflected="yes">れる</token>
 			</pattern>
