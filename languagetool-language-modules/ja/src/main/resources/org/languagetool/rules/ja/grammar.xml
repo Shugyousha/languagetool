@@ -15,7 +15,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>したがって</token>
 				<token postag="SENT_END" />
 			</pattern>
-			<message>したがっては文の最後にきません</message>
+			<message>したがっては文の最後にきません。<suggestion>したがって</suggestion>「。」を削除して、文を続けるのが正しいです</message>
 			<example correction="したがって"><marker>したがって。</marker></example>
 		</rule>
 		<rule id="O" name="お">
@@ -41,7 +41,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>は</token>
 			</pattern>
 			<message>文法ミスがあります。<suggestion>のでは</suggestion>の間違いです。</message>
-			<example correction="描くのでは"><marker>描くでは</marker></example>
+			<example correction="のでは"><marker>描くでは</marker></example>
 		</rule>
 		<rule id="MEISI_DESUMU" name="名詞+で住む">
 			<pattern case_sensitive="no">
@@ -50,7 +50,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>住む</token>
 			</pattern>
 			<message>文法ミスがあります。<suggestion>に住む</suggestion>の間違いです。</message>
-			<example correction="千葉に住む"><marker>千葉で住む</marker></example>
+			<example correction="に住む"><marker>千葉で住む</marker></example>
 		</rule>
 		<rule id="MOTISITE" name="用して">
 			<pattern case_sensitive="no">
@@ -92,7 +92,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>読む</token>
 			</pattern>
 			<message>文法ミスがあります。<suggestion>を読む</suggestion>の間違いです。</message>
-			<example correction="本を読む"><marker>本読む</marker></example>
+			<example correction="を読む"><marker>本読む</marker></example>
 		</rule>
 		<rule id="WOSANNKASITE" name="を参加して">
 			<pattern case_sensitive="no">
@@ -101,7 +101,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>し</token>
 			</pattern>
 			<message>文法ミスがあります。<suggestion>に参加して</suggestion>の間違いです。</message>
-			<example correction="に参加し"><marker>を参加し</marker>て</example>
+			<example correction="に参加して"><marker>を参加し</marker>て</example>
 		</rule>
 		<rule id="DOUSI_KOTOGADEKIRU" name="動詞_ことができる">
 			<pattern case_sensitive="no">
@@ -110,8 +110,8 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>が</token>
 				<token>できる</token>
 			</pattern>
-			<message>省略が可能です</message>
-			<example correction="暮らせる"><marker>暮らすことができる</marker></example>
+			<message>省略が可能です。暮<suggestion>らせる</suggestion></message>
+			<example correction="らせる"><marker>暮らすことができる</marker></example>
 		</rule>
 		<rule id="KINNJOHE" name="近所へ">
 			<pattern case_sensitive="no">
@@ -127,7 +127,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>が</token>
 				<token>長く</token>
 			</pattern>
-			<message>文法ミスがあります。<suggestion>暮らしが長くなる</suggestion>の間違いです。</message>
+			<message>文法ミスがあります。<suggestion>暮らしが長く</suggestion>なるの間違いです。</message>
 			<example correction="暮らしが長く"><marker>暮らすが長く</marker>なる</example>
 		</rule>
 		<rule id="DEATA" name="であた">
@@ -179,7 +179,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token postag="動詞.*" postag_regexp="yes"/>
 				<token>たら</token>
 			</pattern>
-			<message>文法ミスがあります。<suggestion>ずっとあけていたら</suggestion>の間違いです。</message>
+			<message>文法ミスがあります。<suggestion>ずっと開けていたら</suggestion>の間違いです。</message>
 			<example correction="ずっと開けていたら"><marker>ずっと開けたら</marker></example>
 		</rule>
 		<rule id="HATOHAIU" name="鳩は言う">
@@ -236,7 +236,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>歳</token>
 			</pattern>
 			<message>文法ミスがあります。<suggestion>今年で_歳</suggestion>の間違いです。</message>
-			<example correction="今年で十歳"><marker>今年は十歳</marker></example>
+			<example correction="今年で_歳"><marker>今年は十歳</marker></example>
 		</rule>
 		<rule id="KIKUTOKONIYORUTO" name="聞くことによると">
 			<pattern case_sensitive="no">
@@ -562,7 +562,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 			<token>ょ</token>
 			</or>
 			</pattern>
-			<message>「ー」の後に小さい文字はきません</message>
+			<message>「ー」の後に小さい文字はきません。「<suggestion>ーや</suggestion>」の間違いではありませんか。</message>
 			<example correction="ーや">たま<marker>ーゃ</marker></example>
 		</rule>
 		<rule id="CHIGAI" name="違い">
@@ -774,7 +774,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token regexp="yes">え|得</token>
 				<token>ない</token>
 			</pattern>
-			<message>文法ミスがあります。<suggestion>を得ない</suggestion>の間違いです。</message>
+			<message>文法ミスがあります。<suggestion>ざるを得ない</suggestion>の間違いです。</message>
 			<example correction="ざるを得ない">会社を辞め<marker>ざるお得ない</marker></example>
 		</rule>
 	</category>
@@ -1434,7 +1434,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>ず</token>
 			</pattern>
 			<message>誤字があります。<suggestion>取る物も取り敢えず</suggestion>の間違いです。</message>
-			<example correction="取るものも取り敢えず"><marker>取るものも取らず</marker>。</example>
+			<example correction="取る物も取り敢えず"><marker>取るものも取らず</marker>。</example>
 		</rule>
 		<rule id="DEHUXORUTOSUTANDA-DO" name="デフォルトスタンダード">
 			<pattern case_sensitive="no">
@@ -1544,7 +1544,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 			<message>誤字があります。<suggestion>胸三寸</suggestion>の間違いです。</message>
 			<example correction="胸三寸"><marker>胸先寸</marker>に納める。</example>
 		</rule>
-		<rule id="MOZUKUTONARU" name="もずくとなる">
+		<rule id="MOZUKUTONARUTRANSPO" name="もずくとなる">
 			<pattern case_sensitive="no">
 				<token>もずく</token>
 				<token>と</token>
@@ -1831,7 +1831,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>一</token>
 				<token>早く</token>
 			</pattern>
-			<message>誤変換です。<suggestion>逸早いく</suggestion>の間違いです。</message>
+			<message>誤変換です。<suggestion>逸早く</suggestion>の間違いです。</message>
 			<example correction="逸早く"><marker>一早く</marker></example>
 		</rule>
 		<rule id="ITIMATUNOHUANN" name="一末の不安">
@@ -2011,7 +2011,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>うず</token>
 				<token>高い</token>
 			</pattern>
-			<message>誤変換です。<suggestion>堆うい</suggestion>の間違いです。</message>
+			<message>誤変換です。<suggestion>堆い</suggestion>の間違いです。</message>
 			<example correction="堆い"><marker>うず高い</marker></example>
 		</rule>
 		<rule id="USOHUKU" name="嘘吹く">
@@ -2168,7 +2168,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>巻き</token>
 			</pattern>
 			<message>誤変換です。<suggestion>遅蒔き</suggestion>の間違いです。</message>
-			<example correction="遅まき"><marker>遅巻き</marker></example>
+			<example correction="遅蒔き"><marker>遅巻き</marker></example>
 		</rule>
 		<rule id="OTAHUKU" name="御多福">
 			<pattern case_sensitive="no">
@@ -2272,7 +2272,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token regexp="yes" inflected="yes">張る|がえ</token>
 			</pattern>
 			<message>誤変換です。<suggestion>肩肘張る</suggestion>の間違いです。</message>
-			<example correction="肩肘張っ"><marker>片肘張っ</marker>て暮らす。</example>
+			<example correction="肩肘張る"><marker>片肘張っ</marker>て暮らす。</example>
 		</rule>
 		<rule id="KAKKOII" name="かっこいい">
 			<pattern case_sensitive="no">
@@ -2938,7 +2938,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>決戦</token>
 				<token>投票</token>
 			</pattern>
-			<message>誤変換です。<suggestion>決選け投票</suggestion>の間違いです。</message>
+			<message>誤変換です。<suggestion>決選投票</suggestion>の間違いです。</message>
 			<example correction="決選投票"><marker>決戦投票</marker>。</example>
 		</rule>
 		<rule id="KETUMAKUENN" name="血膜炎">
@@ -3074,7 +3074,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>を</token>
 				<token>期</token>
 			</pattern>
-			<message>誤変換です。<suggestion>これを機に</suggestion>の間違いです。</message>
+			<message>誤変換です。<suggestion>これを機</suggestion>の間違いです。</message>
 			<example correction="これを機"><marker>これを期</marker>。</example>
 		</rule>
 		<rule id="KOEDAKA" name="こえだか">
@@ -3100,7 +3100,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 			<message>誤変換です。<suggestion>こんばんは</suggestion>の間違いです。</message>
 			<example correction="こんばんは"><marker>こんばんわ</marker>。</example>
 		</rule>
-		<rule id="JIKISOUSOU" name="時期早々">
+		<rule id="JIKISOUSOUIMARK" name="時期早々">
 			<pattern case_sensitive="no">
 				<token>時期</token>
 				<token>早々</token>
@@ -3260,14 +3260,14 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				</or>
 			</pattern>
 			<message>誤変換です。<suggestion>自信</suggestion>の間違いです。</message>
-			<example correction="自信がない"><marker>自身がない</marker>。</example>
+			<example correction="自信"><marker>自身がない</marker>。</example>
 		</rule>
 		<rule id="JISINNKAJOU" name="自身過剰">
 			<pattern case_sensitive="no">
 				<token skip="2">自身</token>
 				<token>過剰</token>
 			</pattern>
-			<message>誤変換です。<suggestion>自信</suggestion>の間違いです。</message>
+			<message>誤変換です。<suggestion>自信過剰</suggestion>の間違いです。</message>
 			<example correction="自信過剰"><marker>自身過剰</marker>。</example>
 		</rule>
 		<rule id="JYUUOUMUJINN" name="縦横無人">
@@ -3665,7 +3665,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>精魂</token>
 				<token regexp="yes">尽き|つき</token>
 			</pattern>
-			<message>誤変換です。<suggestion>精根尽き果てる</suggestion>の間違いです。</message>
+			<message>誤変換です。<suggestion>精根尽き</suggestion>果てるの間違いです。</message>
 			<example correction="精根尽き"><marker>精魂尽き</marker>果てる。</example>
 		</rule>
 		<rule id="SEITOUHA" name="正当派">
@@ -3745,7 +3745,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>蒼蒼</token>
 				<token>たる</token>
 			</pattern>
-			<message>誤変換です。<suggestion>錚錚たる人物</suggestion>の間違いです。</message>
+			<message>誤変換です。<suggestion>錚錚たる</suggestion>人物の間違いです。</message>
 			<example correction="錚錚たる"><marker>蒼蒼たる</marker>人物。</example>
 		</rule>
 		<rule id="SOSSENNSOKKETU" name="速戦速決">
@@ -4826,7 +4826,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token skip="10">に</token>
 				<token>会</token>
 			</pattern>
-			<message>連合関係がおかしいです。<suggestion>一堂に会する</suggestion>の間違いです。</message>
+			<message>連合関係がおかしいです。<suggestion>一堂に会</suggestion>するの間違いです。</message>
 			<example correction="一堂に会"><marker>一同に会</marker>する。</example>
 		</rule>
 		<rule id="ISSI" name="一矢">
@@ -4881,7 +4881,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token skip="10">の</token>
 				<token>価値</token>
 			</pattern>
-			<message>連合関係がおかしいです。<suggestion>一見の価値有り</suggestion>の間違いです。</message>
+			<message>連合関係がおかしいです。<suggestion>一見の価値</suggestion>有りの間違いです。</message>
 			<example correction="一見の価値">これは<marker>必見の価値</marker>有りの商品だ。</example>
 		</rule>
 		<rule id="ISSYUNSAKIHAYAMI" name="一瞬先は闇">
@@ -4946,7 +4946,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token skip="10">は</token>
 				<token>奇</token>
 			</pattern>
-			<message>連合関係がおかしいです。<suggestion>縁は異なもの</suggestion>の間違いです。</message>
+			<message>連合関係がおかしいです。<suggestion>縁は異</suggestion>なものの間違いです。</message>
 			<example correction="縁は異"><marker>縁は奇</marker>なもの味なもの。</example>
 		</rule>
 		<rule id="ONWOKISERU" name="恩を着せる">
@@ -5050,7 +5050,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token skip="10">が</token>
 				<token>抜ける</token>
 			</pattern>
-			<message>連合関係がおかしいです。<suggestion>櫛の歯が欠けたよう</suggestion>の間違いです</message>
+			<message>連合関係がおかしいです。<suggestion>櫛の歯が欠ける</suggestion>の間違いです</message>
 			<example correction="櫛の歯が欠ける">会場は<marker>櫛の歯が抜ける</marker>。</example>
 		</rule>
 		<rule id="KENRYOKUNIOMONETTE" name="権力におもねって">
@@ -5062,7 +5062,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>ね</token>
 				<token>て</token>
 			</pattern>
-			<message>権力におもねって</message>
+			<message><suggestion>権力におもねって</suggestion>の間違いです</message>
 			<example correction="権力におもねって"><marker>権力におもねて</marker></example>
 		</rule>
 		<rule id="KASSAIWOSAKEBU" name="喝采を叫ぶ">
@@ -5267,7 +5267,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>れ</token>
 				<token>ぬ</token>
 			</pattern>
-			<message>連合関係がおかしいです。<suggestion>押も押されもせぬ</suggestion>の間違いです。</message>
+			<message>連合関係がおかしいです。<suggestion>押しも押されもせぬ</suggestion>の間違いです。</message>
 			<example correction="押しも押されもせぬ"><marker>押しも押されぬ</marker></example>
 		</rule>
 		<rule id="TAITYOUWOKOWASU" name="体調を壊す">
@@ -5355,7 +5355,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token skip="10">か</token>
 				<token>反る</token>
 			</pattern>
-			<message>連合関係がおかしいです。<suggestion>伸るか反るか</suggestion>の間違いです。</message>
+			<message>連合関係がおかしいです。<suggestion>伸るか反る</suggestion>かの間違いです。</message>
 			<example correction="伸るか反る"><marker>乗るか反る</marker>か。</example>
 		</rule>
 		<rule id="NINOKUGADENAI" name="二の句が出ない">
@@ -5863,7 +5863,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>変色</token>
 			</pattern>
 			<message>重複しています。<suggestion>変色する</suggestion>の間違いです。</message>
-			<example correction="変色"><marker>色が変色</marker>する。</example>
+			<example correction="変色する"><marker>色が変色</marker>する。</example>
 		</rule>
 		<rule id="HONNRAIKARA" name="本来から">
 			<pattern case_sensitive="no">
@@ -5966,7 +5966,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 				<token>来日</token>
 		</pattern>
 			<message>重複しています。<suggestion>来日する</suggestion>の間違いです。</message>
-			<example correction="来日"><marker>日本に来日</marker>する。</example>
+			<example correction="来日する"><marker>日本に来日</marker>する。</example>
 		</rule>
 		<rule id="REKKYOUSYOKOKU" name="列強諸国">
 			<pattern case_sensitive="no">
@@ -6008,8 +6008,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 			</pattern>
 			<message>ら抜き言葉があります。<suggestion>覚えられる</suggestion>の間違いです。</message>
 			<url>http://www3.kcn.ne.jp/~jarry/keig/c01c05.htm</url>
-			<example type="correct"><marker>覚えられる</marker>範囲。</example>
-			<example type="incorrect"><marker>覚えれる</marker>範囲。</example>
+			<example correction="覚えられる"><marker>覚えれる</marker>範囲。</example>
 		</rule>
 		<rule id="KURERU" name="来れる">
 			<pattern case_sensitive="no">
@@ -6018,8 +6017,7 @@ Japanese Grammar and Typo Rules file for LanguageTool
 			</pattern>
 			<message>ら抜き言葉があります。<suggestion>来られる</suggestion>の間違いです。</message>
 			<url>http://www3.kcn.ne.jp/~jarry/keig/c01c05.htm</url>
-			<example type="correct"><marker>来られる</marker>。</example>
-			<example type="incorrect"><marker>来れる</marker>。</example>
+			<example correction="来られる"><marker>来れる</marker>。</example>
 		</rule>
 		<rule id="KIRERU" name="着れる">
 			<pattern case_sensitive="no">
