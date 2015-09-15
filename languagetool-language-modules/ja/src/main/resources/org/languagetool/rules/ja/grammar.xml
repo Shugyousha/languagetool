@@ -779,7 +779,6 @@ Japanese Grammar and Typo Rules file for LanguageTool
 		</rule>
 	</category>
 
-
 	<!-- ============================== -->
 	<!-- 誤字 -->
 	<!-- ============================== -->
@@ -5986,11 +5985,11 @@ Japanese Grammar and Typo Rules file for LanguageTool
 			<example correction="轍"><marker>轍の跡</marker></example>
 		</rule>
 	</category>
-	
+
 	<!-- ============================== -->
 	<!-- ら抜き言葉 (上一段活用動詞 下一段活用動詞 カ変動詞)-->
 	<!-- ============================== -->
-	
+
 	<category name="ら抜き言葉">
 		<rule id="OMONEZU" name="阿ず">
 			<pattern case_sensitive="no">
