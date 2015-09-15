@@ -18,6 +18,14 @@ Japanese Grammar and Typo Rules file for LanguageTool
 			<message>したがっては文の最後にきません</message>
 			<example correction="したがって"><marker>したがって。</marker></example>
 		</rule>
+		<rule id="O" name="お">
+			<pattern case_sensitive="no">
+				<token postag="名詞.*" postag_regexp="yes"/>
+				<token>お</token>
+			</pattern>
+			<message>文法ミスがあります。<suggestion>名詞を</suggestion>見る</message>
+			<example correction="名詞を"><marker>名詞お</marker>見る</example>
+		</rule>
 		<rule id="KAIKETUNARU" name="解決なる">
 			<pattern case_sensitive="no">
 				<token>解決</token>
